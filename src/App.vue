@@ -1,4 +1,3 @@
-
 <script setup>
 import { ref,computed } from 'vue';
 
@@ -52,10 +51,10 @@ button:hover {
     <h1>Welcome, {{ name || '' }}!</h1>
     <h3 style="color: blue;">NILAI COUNT: {{ count }}</h3>
     <p v-if="count === 0" style="color: green;">Count masih nol.</p>
-    <p v-else-if="count >= maxLimit" style="color: orange;">Batas maksimum tercapai!</p>
-    <p v-else>Count dalam batas normal</p>
+    <p v-else-if="count >= maxLimit" style="color: orange;">Batas maksimum sudah tercapai!</p>
+    <p v-else>Count masih di bawah batas maksimum.</p>
     <p>Genap : {{ isEven ? 'Ya' : 'Tidak' }}</p>
-    <p>Perkalian count dengan 2: {{ multipliedCount }}</p>
+    <p>Doubled Count : {{ multipliedCount }}</p>
     <input v-model="name" placeholder="Masukkan nama">
     <input v-model.number="inputValue" type="number" style="width: 50px; text-align: center; margin-right: 10px;">
     <button @click="increment">Tambah</button>
